@@ -45,3 +45,26 @@ pre {
   /* border: 1px solid #ccc; */
   background: #f9f6f6;
 }
+
+
+/* Search Form : hugo/themes/hugo-notepadium/layouts/partials/header.html */
+.header.right-side .nav.wrap,
+.header.right-side form {
+  float: left;
+}
+.header.right-side .nav.wrap {
+  margin-right: 10px;
+}
+
+/* Search Page : hugo/themes/hugo-notepadium/layouts/_default/search.html */
+.my-search form {
+  margin-bottom: 1rem;
+}
+
+/* Search Result : hugo/themes/hugo-notepadium/layouts/_default/search.html */
+#search-results h3 {
+  margin-bottom: 1rem !important;
+}
+#search-results > div {
+  margin-bottom: 1rem;
+}
