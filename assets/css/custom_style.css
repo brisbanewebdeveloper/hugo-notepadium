@@ -45,7 +45,9 @@ pre {
   /* border: 1px solid #ccc; */
   background: #f9f6f6;
 }
-
+pre code {
+  color: black;
+}
 
 /* Search Form : hugo/themes/hugo-notepadium/layouts/partials/header.html */
 .header.right-side .nav.wrap,
