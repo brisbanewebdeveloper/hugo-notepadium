@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/cntrump/hugo-notepadium/master/images/screenshot.png)
 
-# Notepadium ![](https://img.shields.io/badge/license-MIT-blue.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/2f389751-e070-437b-9dbd-3773bd57322e/deploy-status)](https://lvv.me)
+# Notepadium [![Build Status](https://travis-ci.org/cntrump/hugo-notepadium.svg?branch=master)](https://travis-ci.org/cntrump/hugo-notepadium)
 
 Request Hugo Version: [0.60.0+](https://github.com/gohugoio/hugo/releases/)
 
@@ -10,11 +10,11 @@ Features
 
 - Logo and slogan
 - Navigation items
-- Syntanx highlighting
+- Syntax highlighting
 - Math supporting
 - Comments powered by Disqus
 - CC License
-- Pagination with large number of pages supporting
+- Pagination with a large number of pages supporting
 - Light & Dark Mode
 - Google analytics supporting
 - Custom CSS/SASS/SCSS supporting
@@ -26,6 +26,7 @@ Features
 - [Twitter Card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary) supporting
 - Builtin iconfont (3KB)
 - Display author profile at article bottom
+- Support Bilibili shortcodes
 
 Preview the exampleSite:
 
@@ -74,9 +75,13 @@ logo = ""  # if you have a logo png
 slogan = "100% JavaScript-free"
 license = ""  # CC License
 fullRss = false # Puts entire HTML post into rss 'description' tag. If unset, default is false.
+ipv6ready = true # Show IPV6Ready logo on footer.
 
 [params.comments]
 enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
+
+[params.comments.utterances]
+repo = "MetalBlueberry/MetalBlueberry.github.io" # enable comments with [utteranc.es](https://utteranc.es/)
 
 [params.math]
 enable = false  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
@@ -180,6 +185,22 @@ Example
 ```
 When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+```
+
+### Bilibili shortcodes
+
+```html
+{{< bilibili BV1FV411d7u7>}}
+OR
+{{< bilibili id="BV1FV411d7u7">}}
+```
+
+Sepecify the part of the video:
+
+```html
+{{< bilibili BV1Yx42197Xm 4 >}}
+OR
+{{< bilibili id="BV1Yx42197Xm" p="4" >}}
 ```
 
 ### Comments
@@ -428,6 +449,7 @@ If `noindex` is included, that page will also be hidden in `sitemap.xml`.
 - [**MathJax**](https://www.mathjax.org/)
 - [**Katex**](https://katex.org/)
 - [**Disqus**](https://disqus.com/)
+- Built-in Japanese language [@kofuk](https://github.com/kofuk)
 
 ## Note
 
